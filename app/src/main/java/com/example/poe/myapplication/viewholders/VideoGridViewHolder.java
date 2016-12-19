@@ -18,8 +18,7 @@ import butterknife.OnClick;
  */
 public class VideoGridViewHolder extends BaseRecyclerViewHolder<Object> {
 
-    @BindView(R.id.checked_text_view)
-    CheckableTextView mCheckedTextView;
+    @BindView(R.id.checked_text_view) CheckableTextView mCheckedTextView;
 
     public VideoGridViewHolder(View itemView) {
         super(itemView);

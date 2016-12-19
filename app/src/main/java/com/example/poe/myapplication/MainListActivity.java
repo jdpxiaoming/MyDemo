@@ -16,12 +16,9 @@ import butterknife.OnClick;
 public class MainListActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.marquee_tv)
-    TextView mMarqueeTv;
-    @BindView(R.id.test_grid_tv)
-    TextView mTestTv;
-    @BindView(R.id.test_view_id_tv)
-    TextView mTestViewIdTv;
+    @BindView(R.id.marquee_tv)    TextView mMarqueeTv;
+    @BindView(R.id.test_grid_tv)    TextView mTestTv;
+    @BindView(R.id.test_view_id_tv)    TextView mTestViewIdTv;
 
 
     @Override
@@ -31,7 +28,7 @@ public class MainListActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.marquee_tv, R.id.test_grid_tv})
+    @OnClick({R.id.marquee_tv, R.id.test_grid_tv,R.id.tv_grid_recycler_view})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.marquee_tv:
@@ -39,6 +36,9 @@ public class MainListActivity extends AppCompatActivity {
                 break;
             case R.id.test_grid_tv:
                 startActivity(new Intent(this, GridRecyclerViewActivity.class));
+                break;
+            case R.id.tv_grid_recycler_view:
+                startActivity(new Intent(this, GridSpaceActivity.class));
                 break;
         }
     }
