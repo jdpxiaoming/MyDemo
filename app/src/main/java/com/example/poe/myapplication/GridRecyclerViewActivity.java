@@ -69,13 +69,10 @@ public class GridRecyclerViewActivity extends AppCompatActivity implements Handl
             @Override
             public VideoGridViewHolder createViewHolder(ViewGroup parent, int viewType) {
                 VideoGridViewHolder viewHolder = new VideoGridViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_video_gride_selector,parent,false));
-                viewHolder.setOnClickListener(new BaseRecyclerViewHolder.OnItemClickListener<Object>() {
-                    @Override
-                    public void onItemClicked(int position, Object data) {
-                        mCurrentIndex = position;
-                        mAdapter.notifyDataSetChanged();
-                        mHandler.sendEmptyMessage(0);
-                    }
+                viewHolder.setOnClickListener((position, data) -> {
+                    mCurrentIndex = position;
+                    mAdapter.notifyDataSetChanged();
+                    mHandler.sendEmptyMessage(0);
                 });
 
                 return viewHolder;

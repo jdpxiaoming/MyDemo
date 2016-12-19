@@ -44,9 +44,9 @@ public class GridSpaceActivity extends AppCompatActivity implements Handler.Call
     }
 
     private void init() {
-        GridLayoutManager manager = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);
+        GridLayoutManager manager = new GridLayoutManager(this,3,GridLayoutManager.VERTICAL,false);
         mRecyclerView.setLayoutManager(manager);
-        mRecyclerView.addItemDecoration(new SpaceItemDirector(10));
+        mRecyclerView.addItemDecoration(new SpaceItemDirector(20));
         setAdapter();
         testMock();
     }
@@ -64,8 +64,8 @@ public class GridSpaceActivity extends AppCompatActivity implements Handler.Call
             public TextViewHolder createViewHolder(ViewGroup parent, int viewType) {
                 TextViewHolder viewHolder = new TextViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_simple_text,parent,false));
                 viewHolder.setOnClickListener((position, data) -> {
-                    mAdapter.notifyDataSetChanged();
-                    mHandler.sendEmptyMessage(0);
+//                    mAdapter.notifyDataSetChanged();
+//                    mHandler.sendEmptyMessage(0);
                 });
 
                 return viewHolder;
