@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+    <com.example.poe.myapplication.widgets.CheckableTextView
+        android:id="@+id/checked_tv"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:textSize="21sp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/item_video_grid"
+        android:background="@drawable/selector_rectangle_white_green"
+        android:checked="true"
+        android:checkMark="@null"
+        />
+    <TextView
+        android:id="@+id/test_tv"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="test"
+        android:gravity="center"
+        android:background="@android:color/holo_green_light"
+        android:layout_centerInParent="true"
+        />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+        <TextView
+            android:id="@+id/test_inner_tv"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="test"
+            android:gravity="center"
+            android:background="@android:color/holo_green_light"
+            />
+    </FrameLayout>
+
+</RelativeLayout>
